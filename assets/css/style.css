@@ -1,0 +1,117 @@
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #5A6F7A;
+    --background-color: #E6F7FF;
+    --text-color: #333;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 130px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.profile-info h1, .profile-info p {
+    margin: 0;
+}
+
+.social a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social a:hover {
+    text-decoration: underline;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.section-title {
+    font-size: 24px;
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.section-content {
+    background-color: #fff;
+    padding: 0px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media(min-width: 768px) {
+    main {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    header {
+        justify-content: space-between;
+        padding: 20px 50px;
+    }
+}
+
+.hide {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.visible {
+    max-height: 1000px; 
+}
+
+
+.section-title {
+    cursor: pointer;
+    user-select: none;
+}
+
+.section-content ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.section-content li {
+    margin-bottom: 5px; 
+    padding: 4px 2px; 
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
